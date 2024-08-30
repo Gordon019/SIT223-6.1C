@@ -22,25 +22,21 @@ pipeline {
         stage('Security Scan') {
             steps {
                 echo 'Running security scan...'
-                // 在这里配置你选择的安全扫描工具
             }
         }
         stage('Deploy to Staging') {
             steps {
                 echo 'Deploying to staging...'
-                // 在这里配置部署脚本
             }
         }
         stage('Integration Tests on Staging') {
             steps {
                 echo 'Running integration tests on staging...'
-                // 在这里配置集成测试脚本
             }
         }
         stage('Deploy to Production') {
             steps {
                 echo 'Deploying to production...'
-                // 在这里配置部署到生产环境的脚本
             }
         }
     }
