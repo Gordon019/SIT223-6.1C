@@ -54,7 +54,7 @@ pipeline {
             emailext (
                 subject: "Build Success: ${currentBuild.fullDisplayName}",
                 body: "Good news, ${currentBuild.fullDisplayName} succeeded.",
-                to: '你的邮箱地址',
+                to: 'y0435199268@gmail.com',
                 attachLog: true
             )
         }
