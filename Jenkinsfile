@@ -15,10 +15,8 @@ pipeline {
         }
         stage('Code Analysis') {
             steps {
-                echo 'Analyzing code...'
-                withEnv(["PATH+SONAR=/opt/homebrew/bin:/usr/bin:/bin:/opt/homebrew/opt/maven/bin"]) {
-                    sh 'sonar-scanner -Dsonar.projectKey=your_project_key -Dsonar.organization=your_organization -Dsonar.login=$SONAR_TOKEN'
-                }
+                echo 'Analyzing code with Checkstyle...'
+                sh 'mvn checkstyle:check'
             }
         }
         stage('Security Scan') {
