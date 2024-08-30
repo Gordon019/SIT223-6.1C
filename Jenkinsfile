@@ -49,6 +49,7 @@ pipeline {
                 subject: "Build Success: ${currentBuild.fullDisplayName}",
                 body: "Good news, ${currentBuild.fullDisplayName} succeeded.",
                 to: 'y0435199268@gmail.com',
+                from: 'y0435199268@gmail.com',
                 attachLog: true
             )
         }
@@ -57,6 +58,7 @@ pipeline {
                 subject: "Build Failed: ${currentBuild.fullDisplayName}",
                 body: "Something went wrong, ${currentBuild.fullDisplayName} failed.",
                 to: 'y0435199268@gmail.com',
+                from: 'y0435199268@gmail.com',
                 attachLog: true
             )
         }
