@@ -42,14 +42,14 @@ pipeline {
     }
     post {
         success {
-            mail to: "y0435199268@gmail.com"
+            mail to: "y0435199268@gmail.com",
             subject: "Build Success: ${currentBuild.fullDisplayName}",
-            body: "Good news, ${currentBuild.fullDisplayName} succeeded.",
+            body: "Good news, ${currentBuild.fullDisplayName} succeeded."
         }
         failure {
-            mail to: "y0435199268@gmail.com"
+            mail to: "y0435199268@gmail.com",
             subject: "Build Failed: ${currentBuild.fullDisplayName}",
-            body: "Something went wrong, ${currentBuild.fullDisplayName} failed.",
+            body: "Something went wrong, ${currentBuild.fullDisplayName} failed."
         }
     }
 }
